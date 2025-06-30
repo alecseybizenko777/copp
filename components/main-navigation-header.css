@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.bg-home {
+  background-color: #e1ebf8;
+}
+
+.bg-blue {
+  background-color: #3792f2;
+}
+
+.bg-sub-blue {
+  background-color: #1e73be;
+}
+
+nav {
+  width: 100%; /* Занимаем всю ширину */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  display: table; /* Выстраиваем элементы в строку */
+}
+
+.menu-item {
+  display: table-cell;
+  text-align: center;
+  padding: 3px 10px;
+}
+
+.menu-link {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.menu > li {
+  position: relative;
+  margin-bottom: 4px; /* Отступ между элементами меню */
+}
+
+.menu > li > a {
+  display: block;
+  padding: 15px 20px; /* Добавляем немного бокового отступа */
+  color: white;
+  text-decoration: none;
+}
+
+.menu > li:hover > a {
+  background-color: #444;
+}
+
+.submenu {
+  display: none; /* Скрываем подменю по умолчанию */
+  /* position: absolute; */
+  left: 0;
+  top: 100%;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu li a {
+  padding: 15px 20px; /* Добавляем боковые отступы (сверху, справа, снизу, слева ИЛИ по вертикали и по горизонтали) для подменю */
+  text-align: left;
+  display: block; /* Делаем ссылки блочными, чтобы занимали всю ширину */
+}
+
+.menu > li:hover .submenu {
+  display: block; /* Показываем подменю при наведении на родительский элемент */
+}
+
+.submenu-item {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Дополнительные стили для вложенных подменю */
+.submenu .submenu {
+  position: static; /* Убираем абсолютное позиционирование для вложенных подменю */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.menu-button-drop:hover {
+  color: #1f4dc6;
+}
+
+.menu-a {
+  color: white;
+}
+
+.menu-a:hover {
+  color: #1f4dc6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content-3 {
+  display: block;
+  grid-column: 3;
+  }
