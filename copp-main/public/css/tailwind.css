@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1B365D; /* Deep institutional trust and authority */
+  --color-primary-50: #EBF4FF; /* Very light blue */
+  --color-primary-100: #DBEAFE; /* Light blue */
+  --color-primary-200: #BFDBFE; /* Blue-200 */
+  --color-primary-300: #93C5FD; /* Blue-300 */
+  --color-primary-400: #60A5FA; /* Blue-400 */
+  --color-primary-500: #3B82F6; /* Blue-500 */
+  --color-primary-600: #2563EB; /* Blue-600 */
+  --color-primary-700: #1D4ED8; /* Blue-700 */
+  --color-primary-800: #1E40AF; /* Blue-800 */
+  --color-primary-900: #1B365D; /* Custom deep navy */
+
+  /* Secondary Colors */
+  --color-secondary: #2C5282; /* Supporting professional depth */
+  --color-secondary-50: #EDF2F7; /* Gray-50 */
+  --color-secondary-100: #E2E8F0; /* Gray-100 */
+  --color-secondary-200: #CBD5E0; /* Gray-200 */
+  --color-secondary-300: #A0AEC0; /* Gray-300 */
+  --color-secondary-400: #718096; /* Gray-400 */
+  --color-secondary-500: #4A5568; /* Gray-500 */
+  --color-secondary-600: #2D3748; /* Gray-600 */
+  --color-secondary-700: #2C5282; /* Custom professional blue */
+  --color-secondary-800: #2A4365; /* Blue-800 */
+  --color-secondary-900: #1A202C; /* Gray-900 */
+
+  /* Accent Colors */
+  --color-accent: #ED8936; /* Energy and forward momentum */
+  --color-accent-50: #FFFAF0; /* Orange-50 */
+  --color-accent-100: #FEEBC8; /* Orange-100 */
+  --color-accent-200: #FBD38D; /* Orange-200 */
+  --color-accent-300: #F6AD55; /* Orange-300 */
+  --color-accent-400: #ED8936; /* Custom energizing orange */
+  --color-accent-500: #DD6B20; /* Orange-500 */
+  --color-accent-600: #C05621; /* Orange-600 */
+  --color-accent-700: #9C4221; /* Orange-700 */
+  --color-accent-800: #7B341E; /* Orange-800 */
+  --color-accent-900: #652B19; /* Orange-900 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* Clean canvas for content clarity */
+  --color-surface: #F7FAFC; /* Subtle section separation */
+  --color-surface-hover: #EDF2F7; /* Gray-50 */
+
+  /* Text Colors */
+  --color-text-primary: #2D3748; /* Strong readability - gray-700 */
+  --color-text-secondary: #4A5568; /* Clear hierarchy - gray-600 */
+  --color-text-muted: #718096; /* Gray-500 */
+  --color-text-light: #A0AEC0; /* Gray-400 */
+
+  /* Status Colors */
+  --color-success: #38A169; /* Achievement and positive outcomes - green-600 */
+  --color-success-light: #68D391; /* Green-400 */
+  --color-warning: #D69E2E; /* Important information - yellow-600 */
+  --color-warning-light: #F6E05E; /* Yellow-400 */
+  --color-error: #E53E3E; /* Clear problems - red-600 */
+  --color-error-light: #FC8181; /* Red-400 */
+
+  /* Border Colors */
+  --color-border: #E2E8F0; /* Light gray borders - gray-200 */
+  --color-border-light: #F7FAFC; /* Very light borders - gray-50 */
+  --color-border-dark: #CBD5E0; /* Darker borders - gray-300 */
+
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom component styles */
+.btn-primary {
+  @apply bg-accent text-white font-montserrat font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-primary text-primary font-montserrat font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white;
+}
+
+.card-elevated {
+  @apply bg-white rounded-lg shadow-base hover:shadow-md transition-shadow duration-300;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
