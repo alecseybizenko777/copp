@@ -180,6 +180,22 @@
               <div class="text-sm font-medium">2000+ выпускников</div>
             </div>            
           </div>
+          <!-- Красивое модальное окно -->
+          <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden">
+              <div class="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] max-w-md max-h-[80vh] overflow-y-auto">
+                  <h2 class="text-xl font-bold mb-4">Заголовок модального окна</h2>
+                  <p class="modalText mb-4">Это пример модального окна с использованием Tailwind CSS и JavaScript.</p>
+                  <button id="closeModal" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Закрыть</button>
+              </div>
+          </div>
+          <!-- Разные модальные окна -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p id="modalText">Здесь будет содержимое модального окна.</p>
+            </div>
+          </div>
+        </div>
 
           
         </div>
