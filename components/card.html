@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../components/card.css" />
+    <link
+      rel="shortcut icon"
+      href="../public/img/favicon.ico"
+      type="image/png"
+    />
+    <title>Компонент: Карточка</title>
+  </head>
+  <body>
+    <!-- КАРТОЧКИ -->
+
+    <!-- Страттегическая сессия -->
+    <div
+      class="card"
+      style="
+        background-image: linear-gradient(
+            rgba(256, 256, 256, 0.7),
+            rgba(256, 256, 256, 0.7)
+          ),
+          url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3');
+
+        background-size: 33% 100%;
+        background-position: center;
+      "
+      data-modal="articleModalPlan"
+      onclick="openModal(this)"
+    >
+      <h3>В Центре опережающей профессиональной подготовки Белгородской области состоялась важная стратегическая сессия!</h3>
+
+      <p>Нажмите, чтобы прочитать статью</p>
+    </div>
+
+    <!-- дизайн -->
+    <div
+      class="card"
+      style="
+        background-image: linear-gradient(
+            rgba(256, 256, 256, 0.7),
+            rgba(256, 256, 256, 0.7)
+          ),
+          url('/media/img/menu/2.jpg');
+
+        background-size: cover;
+      "
+      data-modal="articleModalDesign"
+      onclick="openModal(this)"
+    >
+      <h3>Дизайн</h3>
+
+      <p>Нажмите, чтобы прочитать статью</p>
+    </div>
+
+    <!-- изо -->
+    <div
+      class="card"
+      style="
+        background-image: linear-gradient(
+            rgba(256, 256, 256, 0.7),
+            rgba(256, 256, 256, 0.7)
+          ),
+          url('/media/img/menu/3.jpg');
+
+        background-size: cover;
+        background-position: right center;
+      "
+      data-modal="articleModalArt"
+      onclick="openModal(this)"
+    >
+      <h3>ИЗО</h3>
+
+      <p>Нажмите, чтобы прочитать статью</p>
+    </div>
+
+    <!-- декоративно-прикладное искусство -->
+    <div
+      class="card"
+      style="
+        background-image: linear-gradient(
+            rgba(256, 256, 256, 0.7),
+            rgba(256, 256, 256, 0.7)
+          ),
+          url('/media/img/menu/4.jpg');
+
+        background-size: cover;
+        background-position: right center;
+      "
+      data-modal="articleModalDaa"
+      onclick="openModal(this)"
+    >
+      <h3>Декоративно-прикладное искусство</h3>
+
+      <p>Нажмите, чтобы прочитать статью</p>
+    </div>
+
+    <!-- СТАТЬИ -->
+
+    <!-- Страттегическая сессия -->
+    <div
+      id="articleModalPlan"
+      class="modal"
+      onclick="closeModal('articleModalPlan')"
+    >
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('articleModalPlan')"
+          >&times;</span
+        >
+        <h2>Чтение</h2>
+        <img class="modal-content-image" src="/public/img/book_card.jpg" />
+        <p>В ней приняли участие руководители муниципальных образований региона, а также специалисты областного государственного бюджетного учреждения «Белгородский региональный центр психолого-медико-социального сопровождения».
+        <br/>Сессия стала частью антинаркотического месяца «Знать, чтобы жить», направленного на разработку новых эффективных межведомственных методов профилактики употребления психоактивных веществ среди обучающихся.
+        <br/>Участники сессии обсудили актуальные проблемы и наметили пути к созданию комплексной системы профилактики, которая охватит школы, колледжи, вузы и другие образовательные учреждения Белгородской области..</p>
+      </div>
+    </div>
+
+    <!-- дизайн -->
+    <div
+      id="articleModalDesign"
+      class="modal"
+      onclick="closeModal('articleModalDesign')"
+    >
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('articleModalDesign')"
+          >&times;</span
+        >
+        <h2>Дизайн</h2>
+        <p>Текст статьи о Дизайне...</p>
+      </div>
+    </div>
+
+    <!-- изо -->
+    <div
+      id="articleModalArt"
+      class="modal"
+      onclick="closeModal('articleModalArt')"
+    >
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('articleModalArt')"
+          >&times;</span
+        >
+        <h2>ИЗО</h2>
+        <p>Текст статьи о изобразительном искусстве...</p>
+      </div>
+    </div>
+
+    <!-- декоративно-прикладное искусство -->
+    <div
+      id="articleModalDaa"
+      class="modal"
+      onclick="closeModal('articleModalDaa')"
+    >
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('articleModalDaa')"
+          >&times;</span
+        >
+        <h2>Декоративно-прикладное искусство</h2>
+        <p>Текст статьи о Декоративно-прикладном искусстве ...</p>
+      </div>
+    </div>
+  </body>
+
+  <!-- SCRIPTS SECTION -->
+  <script>
+    function openModal(element) {
+      var modalId = element.dataset.modal;
+
+      var modal = document.getElementById(modalId);
+
+      var modalContent = modal.querySelector(".modal-content");
+
+      modal.classList.add("show");
+
+      modalContent.classList.add("show");
+    }
+
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+
+      var modalContent = modal.querySelector(".modal-content");
+
+      modalContent.classList.remove("show");
+
+      modal.addEventListener(
+        "transitionend",
+        () => {
+          modal.classList.remove("show");
+        },
+        {
+          once: true,
+        }
+      );
+    }
+  </script>
+</html>

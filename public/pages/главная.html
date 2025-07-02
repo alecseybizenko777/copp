@@ -3,23 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="public\img\favicon.ico"
+      type="image/png"
+    />
     <title>Главная - ЦОПП Белгород</title>
     <meta
       name="description"
       content="Ведущий центр профессиональной подготовки в Белгороде. Трансформируйте свою карьеру с помощью современных образовательных программ и экспертного обучения."
     />
     <link rel="stylesheet" href="../css/main.css" />
-    <script
-      type="module"
-      src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcoppbelgo8100back.builtwithrocket.new&_v=0.1.2"
-    ></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Стили для модального окна */
-        #modal {
-            transition: all 0.3s ease;
-        }
-    </style>
   </head>
   <body class="bg-background font-open-sans">
     <!-- Navigation Header -->
@@ -159,10 +153,7 @@
               </div>
             </div>
 
-            <!-- Кнопка для открытия модального окна -->            
-            <button class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600" onclick="openModal('Содержимое для первой кнопки')">Открыть модальное окно 1</button>
-            <button class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600" onclick="openModal('Содержимое для второй кнопки')">Открыть модальное окно 2</button>
-            <button id="openModal" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Открыть модальное окно</button>
+            
           </div>
 
           <!-- Right Content - Video/Image -->
@@ -189,71 +180,9 @@
               <div class="text-sm font-medium">2000+ выпускников</div>
             </div>            
           </div>
-          <!-- Модальное окно -->
-          <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden">
-              <div class="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] max-w-md max-h-[80vh] overflow-y-auto">
-                  <h2 class="text-xl font-bold mb-4">Заголовок модального окна</h2>
-                  <p class="mb-4">Это пример модального окна с использованием Tailwind CSS и JavaScript.</p>
-                  <button id="closeModal" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Закрыть</button>
-              </div>
-          </div>
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <p id="modalText">Здесь будет содержимое модального окна.</p>
-            </div>
-          </div>
+
+          
         </div>
-
-        <!-- Скрипт для разных модальных окон -->
-        <script>
-          // Функция для открытия модального окна
-          function openModal(content) {
-              document.getElementById('modalText').innerText = content; // Устанавливаем содержимое
-              document.getElementById('myModal').style.display = "block"; // Показываем модальное окно
-          }
-
-          // Функция для закрытия модального окна
-          function closeModal() {
-              document.getElementById('myModal').style.display = "none"; // Скрываем модальное окно
-          }
-
-          // Закрытие модального окна при клике вне его
-          window.onclick = function(event) {
-              const modal = document.getElementById('myModal');
-              if (event.target === modal) {
-                  closeModal();
-              }
-          }
-        </script>
-
-        <!-- Скрипт для красивого модального окна -->
-        <script>
-          // Получаем элементы модального окна и кнопок
-          const modal = document.getElementById('modal');
-          const openModalButton = document.getElementById('openModal');
-          const closeModalButton = document.getElementById('closeModal');
-
-          // Функция для открытия модального окна
-          openModalButton.onclick = function() {
-              modal.classList.remove('hidden');
-          };
-
-          // Функция для закрытия модального окна
-          closeModalButton.onclick = function() {
-              modal.classList.add('hidden');
-          };
-
-          // Закрытие модального окна при клике вне его
-          window.onclick = function(event) {
-              if (event.target === modal) {
-                  modal.classList.add('hidden');
-              }
-          };
-        </script>
-
-        
-
       </div>
     </section>
     <!-- END Hero Section -->
@@ -922,6 +851,7 @@
     <!-- END Footer -->
 
     <!-- Script Secions -->
+    <!-- Эффекты страницы -->
     <script>
       // Mobile menu toggle
       document
@@ -976,7 +906,30 @@
         }
       });
     </script>
-    <!-- <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script> -->
+    <!-- Эффекты модального окна -->
+    <script>
+     function openModal(element) {
+
+          var modalId = element.dataset.modal;
+          var modal = document.getElementById(modalId);
+          var modalContent = modal.querySelector(".modal-content");
+
+          modal.classList.add("show");
+          modalContent.classList.add("show");
+        }
+
+      function closeModal(modalId) {
+          var modal = document.getElementById(modalId);
+          var modalContent = modal.querySelector(".modal-content");
+
+          modalContent.classList.remove("show");
+          modal.addEventListener("transitionend", () => {
+              modal.classList.remove("show");
+          }, {
+              once: true
+          });
+      }
+    </script>
      <!-- ENDScript Secions -->
   </body>
 </html>
