@@ -1,62 +1,46 @@
-# HTML
+# Центр Опережающей Профессиональной Подготовки
 
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+## 🚀 Особенности проекта
 
-## 🚀 Features
+Современный HTML-проект, использующий Tailwind CSS для создания адаптивных веб-приложений с минимальными настройками.
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Custom Components** - Pre-built component classes for buttons and containers
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
+- **HTML5** - Современная структура HTML с лучшими практиками
+- **Tailwind CSS** - Утилита-первый CSS-фреймворк для быстрой разработки пользовательского интерфейса
+- **Пользовательские компоненты** - Готовые классы компонентов для кнопок и контейнеров
+- **Скрипты NPM ** - Простые в использовании команды для разработки и создания
+- **Адаптивный дизайн ** - Ориентированный на мобильные устройства подход для всех размеров экрана
 
-## 📋 Prerequisites
-
-- Node.js (v12.x or higher)
-- npm or yarn
-
-## 🛠️ Installation
-
-1. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
-
-2. Start the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-## 📁 Project Structure
+## 📁 Структура проекта
 
 ```
-html_app/
-├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
+COPP/
+├── components/
+│   ├── card.css                          # Стили для элемента "Карточка"
+│   ├── card.html                         # Разметка элемента "Карточка"
+│   ├── main-navigation-header.css        # Стили для элемента "Основная навигационная панель"
+│   └── main-navigation-header.html       # Разметка элемента "Основная навигационная панель"
+├── public/                               # ПОСЛЕДУЮЩЕЕ ОПИСАНИЕ В РАЗРАБОТКЕ
+│   ├── tailwind.css   
+│   └── main.css       
+├── pages/             
+├── index.html         
+├── package.json       
+└── tailwind.config.js 
 ```
 
-## 🎨 Styling
+## 🎨 Стилизация
 
-This project uses Tailwind CSS for styling. Custom utility classes include:
-
-
-## 🧩 Customization
-
-To customize the Tailwind configuration, edit the `tailwind.config.js` file:
+В этом проекте используется Tailwind CSS для стилизации.
 
 
-## 📦 Build for Production
+## 🧩 Настройка
 
-Build the CSS for production:
+Чтобы настроить конфигурацию Tailwind CSS, отредактируйте файл `tailwind.config.js`:
+
+
+## 📦 Сборка css в проекте
+
+Сборка с помощью:
 
 ```bash
 npm run build:css
@@ -64,9 +48,9 @@ npm run build:css
 yarn build:css
 ```
 
-## 📱 Responsive Design
+## 📱 Адаптивный дизайн
 
-The app is built with responsive design using Tailwind CSS breakpoints:
+Приложение создано с использованием адаптивного дизайна с использованием точек останова Tailwind CSS:
 
 - `sm`: 640px and up
 - `md`: 768px and up
@@ -74,9 +58,8 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 - `xl`: 1280px and up
 - `2xl`: 1536px and up
 
-## 🙏 Acknowledgments
+### 🙄 В настоящее время проект находится в разработке.
+Дальнейшее обновление проекта будет выполнено как в личных интересах с целью приобритения навыков работы с HTML, CSS и JS, так и с целью выполнения учебной практики.
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by HTML and Tailwind CSS
-
-Built with ❤️ on Rocket.new
+### 🥸 Проект является учебным.
+Проект не представляет какую-либо организацию, является учебным и не претендует на достоверность информации, содержащейся на его страницах.
