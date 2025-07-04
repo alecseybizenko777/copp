@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../public/img/favicon.ico"
+      href="public\img\favicon.ico"
       type="image/png"
     />
     <title>Главная - ЦОПП Белгород</title>
@@ -51,7 +51,7 @@
               class="text-text-secondary hover:text-primary transition-colors"
               >Сведения об организации</a
             >
-            <button class="btn-primary">Консультация</button>
+            <a href="консультация.html" class="btn-primary text-center">Консультация</a>
           </div>
 
           <!-- Mobile Menu Button -->
@@ -91,9 +91,7 @@
               class="text-text-secondary hover:text-primary transition-colors"
               >Сведения об организации</a
             >
-            <button class="w-full text-left px-3 py-2 text-accent font-medium">
-              Консультация
-            </button>
+            <a href="консультация.html" class="btn-primary text-center">Консультация</a>
           </div>
         </div>
       </nav>
@@ -128,7 +126,7 @@
               <a href="программы.html" class="btn-primary text-center">
                 Изучить программы
               </a>
-              <button class="btn-secondary">Записаться на консультацию</button>
+              <a href="консультация.html" class="btn-secondary">Консультация</a>
             </div>
 
             <!-- Quick Stats -->
@@ -180,25 +178,9 @@
               <div class="text-sm font-medium">2000+ выпускников</div>
             </div>            
           </div>
-          <!-- Красивое модальное окно -->
-          <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden">
-              <div class="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] max-w-md max-h-[80vh] overflow-y-auto">
-                  <h2 class="text-xl font-bold mb-4">Заголовок модального окна</h2>
-                  <p class="modalText mb-4">Это пример модального окна с использованием Tailwind CSS и JavaScript.</p>
-                  <button id="closeModal" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Закрыть</button>
-              </div>
-          </div>
-          <!-- Разные модальные окна -->
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <p id="modalText">Здесь будет содержимое модального окна.</p>
-            </div>
-          </div>
         </div>
 
           
-        </div>
       </div>
     </section>
     <!-- END Hero Section -->
@@ -635,7 +617,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <!-- END Featured Programs Carousel -->
 
@@ -738,11 +719,12 @@
           >
             Посмотреть все программы
           </a>
-          <button
+          <a
+            href="консультация.html"
             class="bg-accent text-white px-8 py-4 rounded-lg font-montserrat font-semibold hover:bg-accent-500 transition-colors"
-          >
-            Записаться на консультацию
-          </button>          
+            >
+              Записаться на консультацию
+            </a>       
         </div>
       </div>
     </section>

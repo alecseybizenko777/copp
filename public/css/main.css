@@ -356,7 +356,7 @@ button,
 input:where([type="button"]),
 input:where([type="reset"]),
 input:where([type="submit"]) {
-  -webkit-appearance: button;
+  /* -webkit-appearance: button; */
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -403,7 +403,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type="search"] {
-  -webkit-appearance: textfield;
+  /* -webkit-appearance: textfield; */
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -544,7 +544,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* 2 */
 }
 
@@ -2412,4 +2412,35 @@ nav {
 /* Дополнительные стили для вложенных подменю */
 .submenu .submenu {
   position: static; /* Убираем абсолютное позиционирование для вложенных подменю */
+}
+
+.container {
+  padding: 0px 200px;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Создание колонок просто как 'А, Б, В' */
+  min-height: 100vh; /* Заполняем полностью высоту видимой части экрана */
+}
+.flex-item {
+  flex: 1; /* Распределяем доступное пространство, как при разделении пиццы 🍕 */
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width : 100vw;
 }
